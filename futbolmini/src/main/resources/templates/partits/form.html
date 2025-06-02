@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Editar Partit</title></head>
+<body>
+<h1>Editar Resultat</h1>
+<form th:action="@{/partits/guardar}" method="post" th:object="${partit}">
+    <input type="hidden" th:field="*{id}" />
+    <p th:text="'Equip local: ' + ${partit.equipLocal.nom}"></p>
+    <p th:text="'Equip visitant: ' + ${partit.equipVisitant.nom}"></p>
+    <label>Gols Local: <input type="number" th:field="*{golsLocal}" /></label><br/>
+    <label>Gols Visitant: <input type="number" th:field="*{golsVisitant}" /></label><br/>
+    <button type="submit">Guardar</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Llista de Partits</title></head>
+<body>
+<h1>Llista de Partits</h1>
+<table>
+    <tr><th>Equip Local</th><th>Equip Visitant</th><th>Data</th><th>Resultat</th><th>Editar</th></tr>
+    <tr th:each="p : ${partits}">
+        <td th:text="${p.equipLocal.nom}"></td>
+        <td th:text="${p.equipVisitant.nom}"></td>
+        <td th:text="${p.data}"></td>
+        <td th:text="${p.golsLocal} + ' - ' + ${p.golsVisitant}"></td>
+        <td><a th:href="@{'/partits/editar/' + ${p.id}}">Editar</a></td>
+    </tr>
+</table>
+</body>
+</html>

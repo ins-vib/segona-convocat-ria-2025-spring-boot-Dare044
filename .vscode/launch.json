@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-FutbolminiApplication<futbolmini>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.exemple.futbolmini.FutbolminiApplication",
+            "projectName": "futbolmini",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
